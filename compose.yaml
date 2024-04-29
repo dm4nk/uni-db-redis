@@ -3,6 +3,6 @@ services:
     image: 'bitnami/redis:latest'
     ports:
       - '127.0.0.1:6379:6379'
-      - '127.0.0.1:9000:9000'
+#      - '127.0.0.1:9000:9000'
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
