@@ -48,5 +48,18 @@ public class StartupApplicationListener implements ApplicationListener<ContextRe
                 .build();
 
         classroomRepository.add(classroom);
+
+        Classroom classroom1 = Classroom.builder()
+                .locationName("14k")
+                .number(510)
+                .build();
+
+        Classroom classroom2 = Classroom.builder()
+                .locationName("18k")
+                .number(511)
+                .build();
+
+        classroomRepository.add(classroom1, "Classroom2");
+        classroomRepository.add(classroom2, "Classroom2");
     }
 }

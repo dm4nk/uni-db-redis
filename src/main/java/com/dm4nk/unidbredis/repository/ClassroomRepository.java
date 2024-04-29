@@ -9,5 +9,13 @@ public interface ClassroomRepository {
 
     void add(Classroom classroom);
 
+    void add(Classroom classroom, String key);
+
     Set<Classroom> getAll();
+
+    Set<Classroom> intersection(Set<String> keys);
+
+    Set<Classroom> union(Set<String> keys);
+
+    Set<Classroom> difference(Set<String> keys);
 }

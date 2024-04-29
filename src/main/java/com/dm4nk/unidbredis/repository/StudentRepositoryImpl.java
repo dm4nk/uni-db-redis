@@ -43,6 +43,6 @@ public class StudentRepositoryImpl implements StudentRepository {
 
     @Override
     public void delete(Student student) {
-        listOperations.remove(KEY, 1, student);
+        listOperations.remove(KEY, 100, student);
     }
 }

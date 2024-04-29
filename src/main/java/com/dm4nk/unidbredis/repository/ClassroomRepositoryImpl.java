@@ -37,7 +37,27 @@ public class ClassroomRepositoryImpl implements ClassroomRepository {
     }
 
     @Override
+    public void add(Classroom classroom, String key) {
+        setOperations.add(key, classroom);
+    }
+
+    @Override
     public Set<Classroom> getAll() {
         return setOperations.members(KEY).stream().map(obj -> (Classroom) obj).collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Classroom> intersection(Set<String> keys) {
+        return setOperations.intersect(keys).stream().map(obj -> (Classroom) obj).collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Classroom> union(Set<String> keys) {
+        return setOperations.union(keys).stream().map(obj -> (Classroom) obj).collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Classroom> difference(Set<String> keys) {
+        return setOperations.difference(keys).stream().map(obj -> (Classroom) obj).collect(Collectors.toSet());
     }
 }
