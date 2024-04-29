@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: uni-db-redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    com.dm4nk.unidbredis: DEBUG
